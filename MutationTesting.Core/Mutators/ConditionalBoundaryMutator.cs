@@ -8,13 +8,7 @@ namespace MutationTesting.Core.Mutators
     {
         public void MutateType(TypeDefinition typeDefinition)
         {
-            foreach(var methodDefinition in typeDefinition.Methods)
-            {
-                foreach(var instruction in methodDefinition.Body.Instructions)
-                {
-                    if (instruction.OpCode == OpCodes.Blt) instruction.OpCode = OpCodes.Ble;
-                }
-            }
+			throw new NotImplementedException();
         }
     }
 }
