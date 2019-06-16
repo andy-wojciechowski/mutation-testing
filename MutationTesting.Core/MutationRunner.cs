@@ -7,22 +7,22 @@ using System.Text;
 
 namespace MutationTesting.Core
 {
-	public class MutationRunner
-	{
-		private IList<IMutator> Mutators { get; }
-		private ITestRunner TestRunner { get; }
-		private IReferenceLoader ReferenceLoader { get; }
+    public class MutationRunner
+    {
+        private IList<IMutator> Mutators { get; }
+        private ITestRunner TestRunner { get; }
+        private IReferenceLoader ReferenceLoader { get; }
 
-		public MutationRunner(IList<IMutator> mutators, ITestRunner testRunner, IReferenceLoader referenceLoader)
-		{
-			Mutators = mutators;
-			TestRunner = testRunner;
-			ReferenceLoader = referenceLoader;
-		}
+        public MutationRunner(IList<IMutator> mutators, ITestRunner testRunner, IReferenceLoader referenceLoader)
+        {
+            Mutators = mutators;
+            TestRunner = testRunner;
+            ReferenceLoader = referenceLoader;
+        }
 
-		public void RunMutators()
-		{
-			throw new NotImplementedException();
-		}
-	}
+        public void RunMutators()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

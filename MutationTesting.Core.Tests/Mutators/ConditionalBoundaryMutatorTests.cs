@@ -7,8 +7,8 @@ using Xunit;
 
 namespace MutationTesting.Core.Tests.Mutators
 {
-	public class ConditionalBoundaryMutatorTests : MutatorUnitTest
-	{
-		public ConditionalBoundaryMutatorTests() : base("ConditionalBoundarySampleType") { }
-	}
+    public class ConditionalBoundaryMutatorTests : MutatorUnitTest
+    {
+        public ConditionalBoundaryMutatorTests() : base("ConditionalBoundarySampleType") { }
+    }
 }
