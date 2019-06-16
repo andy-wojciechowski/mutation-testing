@@ -1,12 +1,12 @@
-﻿using System;
-using Mono.Cecil;
-using Mono.Cecil.Cil;
+﻿using Mono.Cecil.Cil;
+using System;
+using System.Collections.Generic;
 
 namespace MutationTesting.Core.Mutators
 {
-    public class ConditionalBoundaryMutator : IMutator
+	public class ConditionalBoundaryMutator : IMutator
     {
-        public void MutateType(TypeDefinition typeDefinition)
+        public void MutateType(IList<Instruction> typeDefinition)
         {
 			throw new NotImplementedException();
         }

@@ -16,11 +16,11 @@ namespace MutationTesting.Core.Tests.Mutators
 			var mutator = new IncrementAndDecrementMutator();
 
 			//Act
-			mutator.MutateType(this.TypeDefinition);
+			mutator.MutateType(this.Instructions);
 
 			//Assert
-			Assert.Equal(OpCodes.Sub, this.InitialInstructions[5].OpCode);
-			Assert.Equal(OpCodes.Sub, this.InitialInstructions[9].OpCode);
+			Assert.Equal(OpCodes.Sub, this.Instructions[5].OpCode);
+			Assert.Equal(OpCodes.Sub, this.Instructions[9].OpCode);
 		}
 
 		[Fact]
@@ -30,13 +30,13 @@ namespace MutationTesting.Core.Tests.Mutators
 			var mutator = new IncrementAndDecrementMutator();
 
 			//Act
-			mutator.MutateType(this.TypeDefinition);
+			mutator.MutateType(this.Instructions);
 
 			//Assert
-			Assert.Equal(OpCodes.Sub, this.InitialInstructions[17].OpCode);
-			Assert.Equal(OpCodes.Sub, this.InitialInstructions[21].OpCode);
-			Assert.Equal(OpCodes.Sub, this.InitialInstructions[33].OpCode);
-			Assert.Equal(OpCodes.Sub, this.InitialInstructions[37].OpCode);
+			Assert.Equal(OpCodes.Sub, this.Instructions[17].OpCode);
+			Assert.Equal(OpCodes.Sub, this.Instructions[21].OpCode);
+			Assert.Equal(OpCodes.Sub, this.Instructions[33].OpCode);
+			Assert.Equal(OpCodes.Sub, this.Instructions[37].OpCode);
 		}
 
 		[Fact]
@@ -46,11 +46,11 @@ namespace MutationTesting.Core.Tests.Mutators
 			var mutator = new IncrementAndDecrementMutator();
 
 			//Act
-			mutator.MutateType(this.TypeDefinition);
+			mutator.MutateType(this.Instructions);
 
 			//Assert
-			Assert.Equal(OpCodes.Add, this.InitialInstructions[45].OpCode);
-			Assert.Equal(OpCodes.Add, this.InitialInstructions[49].OpCode);
+			Assert.Equal(OpCodes.Add, this.Instructions[45].OpCode);
+			Assert.Equal(OpCodes.Add, this.Instructions[49].OpCode);
 		}
 
 		[Fact]
@@ -60,13 +60,13 @@ namespace MutationTesting.Core.Tests.Mutators
 			var mutator = new IncrementAndDecrementMutator();
 
 			//Act
-			mutator.MutateType(this.TypeDefinition);
+			mutator.MutateType(this.Instructions);
 
 			//Assert
-			Assert.Equal(OpCodes.Add, this.InitialInstructions[57].OpCode);
-			Assert.Equal(OpCodes.Add, this.InitialInstructions[61].OpCode);
-			Assert.Equal(OpCodes.Add, this.InitialInstructions[73].OpCode);
-			Assert.Equal(OpCodes.Add, this.InitialInstructions[77].OpCode);
+			Assert.Equal(OpCodes.Add, this.Instructions[57].OpCode);
+			Assert.Equal(OpCodes.Add, this.Instructions[61].OpCode);
+			Assert.Equal(OpCodes.Add, this.Instructions[73].OpCode);
+			Assert.Equal(OpCodes.Add, this.Instructions[77].OpCode);
 		}
 
 		[Fact]
@@ -76,11 +76,11 @@ namespace MutationTesting.Core.Tests.Mutators
 			var mutator = new IncrementAndDecrementMutator();
 
 			//Act
-			mutator.MutateType(this.TypeDefinition);
+			mutator.MutateType(this.Instructions);
 
 			//Assert
-			Assert.Equal(OpCodes.Sub, this.InitialInstructions[85].OpCode);
-			Assert.Equal(OpCodes.Add, this.InitialInstructions[89].OpCode);
+			Assert.Equal(OpCodes.Sub, this.Instructions[85].OpCode);
+			Assert.Equal(OpCodes.Add, this.Instructions[89].OpCode);
 		}
 
 		[Fact]
@@ -90,11 +90,11 @@ namespace MutationTesting.Core.Tests.Mutators
 			var mutator = new IncrementAndDecrementMutator();
 
 			//Act
-			mutator.MutateType(this.TypeDefinition);
+			mutator.MutateType(this.Instructions);
 
 			//Assert
-			Assert.Equal(OpCodes.Sub, this.InitialInstructions[97].OpCode);
-			Assert.Equal(OpCodes.Add, this.InitialInstructions[101].OpCode);
+			Assert.Equal(OpCodes.Sub, this.Instructions[97].OpCode);
+			Assert.Equal(OpCodes.Add, this.Instructions[101].OpCode);
 		}
 
 		[Fact]
@@ -104,13 +104,13 @@ namespace MutationTesting.Core.Tests.Mutators
 			var mutator = new IncrementAndDecrementMutator();
 
 			//Act
-			mutator.MutateType(this.TypeDefinition);
+			mutator.MutateType(this.Instructions);
 
 			//Assert
-			Assert.Equal(OpCodes.Add, this.InitialInstructions[109].OpCode);
-			Assert.Equal(OpCodes.Add, this.InitialInstructions[113].OpCode);
-			Assert.Equal(OpCodes.Sub, this.InitialInstructions[117].OpCode);
-			Assert.Equal(OpCodes.Sub, this.InitialInstructions[121].OpCode);
+			Assert.Equal(OpCodes.Add, this.Instructions[109].OpCode);
+			Assert.Equal(OpCodes.Add, this.Instructions[113].OpCode);
+			Assert.Equal(OpCodes.Sub, this.Instructions[117].OpCode);
+			Assert.Equal(OpCodes.Sub, this.Instructions[121].OpCode);
 		}
 	}
 }

@@ -1,5 +1,5 @@
-﻿using Mono.Cecil;
-using Mono.Cecil.Cil;
+﻿using Mono.Cecil.Cil;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace MutationTesting.Core.Mutators
@@ -13,11 +13,10 @@ namespace MutationTesting.Core.Mutators
 	{
 		private readonly byte ONE_OP2_VALUE = 23;
 
-		public void MutateType(TypeDefinition typeDefinition)
+		public void MutateType(IList<Instruction> instructions)
 		{
-			var methodInstrustions = typeDefinition.Methods.SelectMany(x => x.Body.Instructions).ToList();
-			var addInstructions = methodInstrustions.Where(x => x.OpCode == OpCodes.Add && x.Previous.OpCode.Op2 == ONE_OP2_VALUE).ToList();
-			var subInstructions = methodInstrustions.Where(x => x.OpCode == OpCodes.Sub && x.Previous.OpCode.Op2 == ONE_OP2_VALUE).ToList();
+			var addInstructions = instructions.Where(x => x.OpCode == OpCodes.Add && x.Previous.OpCode.Op2 == ONE_OP2_VALUE).ToList();
+			var subInstructions = instructions.Where(x => x.OpCode == OpCodes.Sub && x.Previous.OpCode.Op2 == ONE_OP2_VALUE).ToList();
 			addInstructions.ForEach(x => x.OpCode = OpCodes.Sub);
 			subInstructions.ForEach(x => x.OpCode = OpCodes.Add);
 		}
